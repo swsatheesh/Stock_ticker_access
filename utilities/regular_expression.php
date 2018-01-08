@@ -21,4 +21,13 @@
 
         return $xml;
     }
+    function extract_object_name($str) {
+        $result = preg_split('/\s/', trim($str));
+        if (count($result) > 1) {
+            $objname = strtolower($result[0] . substr($result[1], 0, 2));
+        } else {
+            $objname = strtolower($result[0]);
+        }
+        return $objname;
+    }
 ?>

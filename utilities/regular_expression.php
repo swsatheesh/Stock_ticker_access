@@ -16,10 +16,11 @@
     }
     function get_all_matched_rows($tag) {
         $matches = array();
-        preg_match_all('#<div class=("row"|"row [a-z].*?")>(.*?)<\/div>#s', $tag, $matches);
-        $xml = $matches[2];
+        preg_match_all('#<table class="dataTable">(.*?)<\/table>#s', $tag, $matches);
+        echo $tag;
+        // $xml = $matches[2];
 
-        return $xml;
+        // return $xml;
     }
     function extract_object_name($str) {
         $result = preg_split('/\s/', trim($str));

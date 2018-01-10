@@ -22,8 +22,8 @@
         }
     }
     $link_and_name = f_usort($link_and_name);
-    $newPage = get_web_page('http://www.marketonmobile.com/search.php');
+    $newPage = get_web_page('https://money.rediff.com/companies');
     $extracted_list = get_all_matched_rows($newPage['content']);
-    $total_s_list = $data_group->create_object_of_total_list($extracted_list);
-    $result_array = $extract_code->init_extract($total_s_list, $link_and_name);
+    // $total_s_list = $data_group->create_object_of_total_list($extracted_list);
+    // $result_array = $extract_code->init_extract($total_s_list, $link_and_name);
 ?>
